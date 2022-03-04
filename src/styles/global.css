@@ -9,6 +9,10 @@
   scroll-behavior: smooth;
 }
 
+.hide {
+  display: none;
+}
+
 @media only screen and (max-width: 1024px) {
   .header {
     transition: ease-in-out;
@@ -46,7 +50,7 @@
 }
 
 .tooltip .right {
-  min-width: 200px;
+  width: max-content;
   top: 50%;
   left: 100%;
   margin-left: 20px;
@@ -54,8 +58,8 @@
   padding: 10px 20px;
   color: black;
   background-color: white;
-  font-weight: normal;
-  font-size: 13px;
+
+  font-size: 16px;
   border-radius: 8px;
   position: absolute;
   z-index: 99999999;
