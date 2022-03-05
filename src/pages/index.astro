@@ -174,7 +174,7 @@ import { Technologies, LearningTechnologies } from '../components/Icons.jsx';
     >
       <section
         id="home"
-        class="h-[500px] bg-primary rounded flex flex-col justify-center p-4 lg:p-8 items-center text-center shadow  relative "
+        class="h-[500px] bg-primary rounded flex flex-col justify-center p-6 lg:p-8 items-center text-center shadow  relative "
       >
         <h1 class="text-4xl font-bold lg:text-6xl leading-10 mb-6">
           Hey 👋
@@ -217,6 +217,7 @@ import { Technologies, LearningTechnologies } from '../components/Icons.jsx';
           <br /> Once done with the front end, I moved on to learning about
           <span class="text">APIs, databases, backend systems and servers.</span
           >
+          <br />
           I grasped the key technologies of the
           <span class="text"> MERN stack</span> and went on to develop a full logistics
           booking and tracking system, having integrated it with international couriers’
@@ -250,17 +251,55 @@ import { Technologies, LearningTechnologies } from '../components/Icons.jsx';
       <section id="projects" class=" bg-primary rounded  p-8 lg:p-16 shadow">
         <h2 class="text-3xl font-semibold mb-1">My Projects</h2>
         <span class="bg-secondary h-2 w-10 block rounded mb-8"></span>
-        <div class="grid lg:grid-cols-3 gap-8">
-          <div
-            class="card bg-tertiary p-4 rounded shadow cursor-pointer flex flex-col items-center"
-          >
-            <p class="text-2xl font-semibold mb-4">Eliexpress</p>
-            <div class="overflow-hidden ">
+        <div class="grid gap-8  xl:gap-20">
+          <div class="card  p-4 rounded  relative ">
+            <div class="projectInfo max-w-[600px] z-10    ">
+              <p class="text-xl font-semibold mb-6">Eliexpress</p>
+              <p class="leading-8 mb-6 bg-tertiary p-4 rounded opacity-95">
+                A full-stack logistics booking and tracking website built with
+                NextJS. It connects to a first party API that handles the
+                buisiniess logic. The Backend is integrated with several carrier
+                APis such as FedEx, TNT, DHL, Aras Cargo.
+              </p>
+              <p class="mb-6 opacity-80 ">NextJS - ExpressJS - MongoDB</p>
+              <a
+                href="https://eliexpress.com.tr"
+                rel="noreferrer"
+                target="_blank"
+                ><i
+                  class="fa fa-external-link text-secondary text-lg"
+                  aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="projectImage  top-0 absolute right-0 hidden xl:block ">
               <img
-                src={Astro.resolve('../assets/eli1.png')}
+                src={Astro.resolve('../assets/eli.png')}
                 alt="My Picture"
-                width="300"
+                class=" lg:max-w-[650px] rounded "
               />
+              <div class="overlay rounded"></div>
+            </div>
+          </div>
+          <div class="card  p-4 rounded  relative ">
+            <div
+              class="projectInfo max-w-[600px] z-10 xl:float-right xl:text-right  mb-16  "
+            >
+              <p class="text-xl font-semibold mb-6">EliDash</p>
+              <p class="leading-8 mb-6 bg-tertiary p-4 rounded opacity-95">
+                A custom tailormade ERP and CRM system that handles everything
+                from user managment,to interal logistics operations. It aslo
+                acts as Eliexpress's API.
+              </p>
+              <p class="mb-6 opacity-80 ">ReactJS - ExpressJS - MongoDB</p>
+            </div>
+            <div class="projectImage  top-0 absolute left-0 hidden xl:block  ">
+              <img
+                src={Astro.resolve('../assets/dash1.png')}
+                alt="My Picture"
+                class=" lg:max-w-[650px] rounded"
+              />
+
+              <div class="overlay rounded"></div>
             </div>
           </div>
         </div>

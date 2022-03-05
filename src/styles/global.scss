@@ -9,17 +9,19 @@
 * {
   .light {
     --bgPrimary: white;
-    --bgTertiary: #f1f5f9;
+    --bgTertiary: rgb(241, 245, 249);
     --bgSecondary: black;
     --textSecondary: black;
     --textPrimary: white;
+    --overlay: 241, 245, 249;
   }
   .dark {
     --bgPrimary: black;
-    --bgTertiary: hsl(0, 0%, 5%);
+    --bgTertiary: rgb(13, 13, 13);
     --bgSecondary: white;
     --textSecondary: white;
     --textPrimary: black;
+    --overlay: 13, 13, 13;
   }
 }
 
@@ -36,6 +38,10 @@ li {
   scrollbar-color: var(--bgSecondary) var(--bgTertiary);
   scrollbar-width: thin;
   scroll-behavior: smooth;
+}
+
+section {
+  z-index: 0;
 }
 
 .hide {
@@ -136,4 +142,18 @@ li {
     align-items: center;
     justify-content: center;
   }
+}
+
+.projectImage {
+  z-index: -10;
+}
+
+.overlay {
+  background: rgba(var(--overlay), 0.3);
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
