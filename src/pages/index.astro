@@ -35,7 +35,7 @@
     class="container mx-auto py-8 lg:py-16 px-4  bg-secondary overflow-x-hidden "
   >
     <nav
-      class="bg-primary sticky z-10 flex items-center gap-4 top-2 lg:hidden text-white p-4 rounded"
+      class="bg-primary sticky   z-10 flex items-center gap-4 top-2 lg:hidden text-white p-4 rounded"
     >
       <button
         class="hover:translate-x-2 transition-all cursor-pointer h-6 w-6"
@@ -129,7 +129,7 @@
           <div class="tooltip">
             <i class="fa fa-at" aria-hidden="true"></i>
             <div class="right">
-              <p id="email">Copy Phone Number</p>
+              <p id="email">Copy Email</p>
               <i></i>
             </div>
           </div>
@@ -358,8 +358,16 @@
           openMenu();
         }
         setTimeout(() => {
-          var elmntToView = document.getElementById(id);
-          elmntToView.scrollIntoView({ block: 'center' });
+          var element = document.getElementById(id);
+          var headerOffset = window.innerWidth > 1024 ? 64 : 90;
+          var elementPosition = element.getBoundingClientRect().top;
+          var offsetPosition =
+            elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth',
+          });
         }, 100);
       }
     </script>
