@@ -79,7 +79,11 @@ import { Technologies, LearningTechnologies } from '../components/Icons.jsx';
       id="header"
       class="w-[240px] flex flex-col  items-center h-[500px] header bg-black text-white  rounded float-left fixed top-32 lg:top-16 px-8 gap-4 pt-16 pb-8  shadow z-10"
     >
-      <button class="absolute top-4 left-4 " onclick="themeToggel()">
+      <button
+        class="absolute top-4 left-4 "
+        onclick="themeToggel()"
+        aria-label="theme toggle"
+      >
         <i
           id="themeIcon"
           class="fa fa-moon-o   p-2 w-8 h-8  flex items-center justify-center   text-white hover:bg-white transition-all hover:text-black   rounded-full"
