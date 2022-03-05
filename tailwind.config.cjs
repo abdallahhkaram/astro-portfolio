@@ -7,27 +7,15 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          light: '#000',
-          DEFAULT: '#000',
-          dark: '#000',
+          DEFAULT: 'var(--bgPrimary)',
         },
-        // primary: {
-        //   light: '#F34954',
-        //   DEFAULT: '#F34954',
-        //   dark: '#F34954',
-        // },
         secondary: {
-          light: '#fff',
-          DEFAULT: '#f1f5f9',
-          dark: '#f1f5f9',
+          DEFAULT: 'var(--bgSecondary)',
         },
-        // secondary: {
-        //   light: '#2B2D41',
-        //   DEFAULT: '#222438',
-        //   dark: '#222438',
-        // },
+        tertiary: {
+          DEFAULT: 'var(--bgTertiary)',
+        },
       },
     },
   },
-  // more options here
 };
