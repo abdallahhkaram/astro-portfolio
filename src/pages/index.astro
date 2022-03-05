@@ -1,4 +1,5 @@
 ---
+import { Technologies, LearningTechnologies } from '../components/Icons.jsx';
 ---
 
 <html lang="en">
@@ -14,7 +15,7 @@
       content="Abdallah Karam, Web Developer, Full Stack,  IT, IT Manager, IT support, Beirut, Istanbul , Turkey , Lebanon, React,Express,MongoDB,Javascrip,HTML,CSS "
     />
     <meta name="author" content="Abdallah Karam" />
-    <link rel="stylesheet" href={Astro.resolve('../styles/global.css')} />
+    <link rel="stylesheet" href={Astro.resolve('../styles/global.scss')} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,10 +33,10 @@
     <title>Abdallah Karam</title>
   </head>
   <body
-    class="container mx-auto py-8 lg:py-16 px-4  bg-secondary overflow-x-hidden "
+    class="container mx-auto py-8 lg:py-16 px-4  bg-tertiary overflow-x-hidden dark "
   >
     <nav
-      class="bg-primary sticky   z-10 flex items-center gap-4 top-2 lg:hidden text-white p-4 rounded"
+      class="bg-black sticky   z-10 flex items-center gap-4 top-2 lg:hidden text-white p-4 rounded"
     >
       <button
         class="hover:translate-x-2 transition-all cursor-pointer h-6 w-6"
@@ -71,39 +72,48 @@
             d="M6 18L18 6M6 6l12 12"></path>
         </svg>
       </button>
-      <p class="text-2xl font-bold">Abdallah Karam</p>
+      <p class="text-2xl  font-bold text-white">Abdallah Karam</p>
     </nav>
     <header
       id="header"
-      class="w-[240px] flex flex-col text-white items-center h-[500px] header bg-primary rounded float-left fixed top-32 lg:top-16 px-8 gap-4 pt-16 pb-8  shadow z-10"
+      class="w-[240px] flex flex-col  items-center h-[500px] header bg-black text-white  rounded float-left fixed top-32 lg:top-16 px-8 gap-4 pt-16 pb-8  shadow z-10"
     >
+      <button class="absolute top-4 left-4" onclick="themeToggel()">
+        <i
+          class="fa fa-moon-o   w-8 h-8 p-1 hover:bgb  text-white hover:bg-white transition-all hover:text-black flex items-center justify-center   rounded-full"
+          aria-hidden="true"></i>
+        <i
+          class="fa fa-sun-o   w-8 h-8 p-1  text-white hover:bg-white transition-all hover:text-black flex items-center justify-center   rounded-full"
+          aria-hidden="true"></i>
+      </button>
+
       <img
         src={Astro.resolve('../assets/me.jpg')}
         alt="My Picture"
         class="w-28 h-28 rounded-full "
       />
-      <p class="text-xl font-bold">Abdallah Karam</p>
-      <ul class="w-full flex flex-col gap-4">
+      <p class="text-xl font-bold text-white">Abdallah Karam</p>
+      <ul class="w-full flex flex-col gap-4 ">
         <li
-          class="hover:translate-x-2 transition-all cursor-pointer w-max"
+          class="hover:translate-x-2 transition-all cursor-pointer w-max text-white"
           onclick="ScrollTo('home')"
         >
           Home
         </li>
         <li
-          class="hover:translate-x-2 transition-all cursor-pointer w-max"
+          class="hover:translate-x-2 transition-all cursor-pointer w-max text-white"
           onclick="ScrollTo('about')"
         >
           About
         </li>
         <li
-          class="hover:translate-x-2 transition-all cursor-pointer w-max"
+          class="hover:translate-x-2 transition-all cursor-pointer w-max text-white"
           onclick="ScrollTo('projects')"
         >
           Projects
         </li>
         <li
-          class="hover:translate-x-2 transition-all cursor-pointer w-max"
+          class="hover:translate-x-2 transition-all cursor-pointer w-max text-white"
           onclick="ScrollTo('blog')"
         >
           Blog
@@ -127,9 +137,9 @@
           onmouseout="outFunc('Copy Email','email')"
         >
           <div class="tooltip">
-            <i class="fa fa-at" aria-hidden="true"></i>
-            <div class="right">
-              <p id="email">Copy Email</p>
+            <i class="fa fa-at text-white" aria-hidden="true"></i>
+            <div class="right ">
+              <p class="text-black" id="email">Copy Email</p>
               <i></i>
             </div>
           </div>
@@ -150,9 +160,9 @@
           onmouseout="outFunc('Copy Phone Number','phone1')"
         >
           <div class="tooltip">
-            <i class="fa fa-phone" aria-hidden="true"></i>
-            <div class="right">
-              <p id="phone1">Copy Phone Number</p>
+            <i class="fa fa-phone text-white" aria-hidden="true"></i>
+            <div class="right ">
+              <p class="text-black" id="phone1">Copy Phone Number</p>
               <i></i>
             </div>
           </div>
@@ -166,7 +176,7 @@
     >
       <section
         id="home"
-        class="h-[500px] bg-secondary-light rounded flex flex-col justify-center p-4 lg:p-8 items-center text-center shadow  relative "
+        class="h-[500px] bg-primary rounded flex flex-col justify-center p-4 lg:p-8 items-center text-center shadow  relative "
       >
         <h1 class="text-4xl font-bold lg:text-6xl leading-10 mb-6">
           Hey 👋
@@ -192,29 +202,26 @@
           </svg>
         </div>
       </section>
-      <section
-        id="about"
-        class=" bg-secondary-light rounded   p-8 lg:p-16  shadow"
-      >
+      <section id="about" class=" bg-primary rounded   p-8 lg:p-16  shadow">
         <h2 class="text-3xl font-semibold mb-1">About Me</h2>
-        <span class="bg-black h-2 w-10 block rounded mb-8"></span>
-        <p class=" text-gray-800 text-xl font-thin  mb-16">
+        <span class="bg-secondary h-2 w-10 block rounded mb-8"></span>
+        <p class="  text-xl font-thin  mb-16 leading-9">
           I am Abdallah Karam, an IT Administrator and a fullstack web developer
-          from Beirut, Lebanon. Coming from an IT background I decided to enter
-          the world of development after my company wanted to update their
-          existing website and internal system. I took on the challenge of
-          learning web development on my own, starting off with the basics of
+          from Beirut, Lebanon currently based in Istanbul Turkey. <br /> Coming
+          from an IT background I decided to enter the world of development after
+          a company i was working with wanted to update their existing website and
+          internal ERP and CRM systems. I took on the challenge of learning web development
+          on my own, starting off with the basics of
           <span class="text"> HTML CSS and Javascript</span> , transitioning to complex
           frameworks such as
-          <span class="text">ReactJs and NextJs.</span> Once done with the front
-          end, I moved on to learning about
-          <span class="text"
-            >APIs, databases and backend systems and servers.</span
+          <span class="text">ReactJs and NextJs.</span>
+          <br /> Once done with the front end, I moved on to learning about
+          <span class="text">APIs, databases, backend systems and servers.</span
           >
           I grasped the key technologies of the
           <span class="text"> MERN stack</span> and went on to develop a full logistics
           booking and tracking system, having integrated it with international couriers’
-          APIs such as FedEx and DHL to name a few. To this day i keep on learning
+          APIs such as FedEx, TNT and DHL to name a few. To this day i keep on learning
           more and more about development everyday with new tools and technologies
           to add to my arsenal as a full stack web developer.
         </p>
@@ -223,86 +230,29 @@
             href={Astro.resolve('../assets/resume.pdf')}
             target="_blank"
             rel="noreferrer"
-            class="bg-black text-white px-4 py-2 inline-block rounded hover:-translate-y-2 transition-all "
+            class="bg-secondary text-primary px-4 py-2 inline-block rounded hover:-translate-y-2 transition-all "
             >Get My Resume</a
           >
         </div>
       </section>
 
-      <section class=" bg-secondary-light rounded  p-8 lg:p-16 shadow">
+      <section class=" bg-primary rounded  p-8 lg:p-16 shadow">
         <h2 class="text-3xl font-semibold mb-1">
-          Skills and Technologies and Interests
+          Technologies I'm Comfortable With
         </h2>
-        <span class="bg-black h-2 w-20 block rounded mb-8"></span>
-        <div class="grid xl:grid-cols-2 gap-8">
-          <div class="ml-2">
-            <h2 class="text-2xl font-semibold mb-1">
-              Development Technologies:
-            </h2>
-
-            <ul class="text-xl font-medium">
-              <li>HTML - CSS - SCC - Javascript - Typescript</li>
-              <li>BootStrap - TailwindCSS - MUI</li>
-              <li>RactJS - NextJS</li>
-              <li>MVC frameworks</li>
-              <li>NodeJS - ExpressJS</li>
-              <li>MongoDB</li>
-              <li>Git - NGINX - Linux Server Deployment</li>
-            </ul>
-          </div>
-          <div class="ml-2">
-            <h2 class="text-2xl font-semibold mb-1">
-              IT Skills and Technologies:
-            </h2>
-
-            <ul class="text-xl font-medium">
-              <li>Windows - Linux - Mac</li>
-              <li>Windows Server - Linux Server</li>
-              <li>Cisco - FortiGate - Fortinet</li>
-              <li>NETsurveillance</li>
-              <li>TCP/IP - DNS</li>
-              <li>Network Patching and termination</li>
-              <li>Camera installation</li>
-              <li>Computer Upgrade and migration</li>
-              <li>Windows Image Creation and installation</li>
-            </ul>
-          </div>
-          <div class="ml-2">
-            <h2 class="text-2xl font-semibold mb-1">
-              Technologies im learning:
-            </h2>
-
-            <ul class="text-xl font-medium">
-              <li>Astro</li>
-              <li>VueJS</li>
-              <li>PHP</li>
-              <li>Laravel</li>
-              <li>SQL</li>
-              <li>Postgres</li>
-              <li>Unit Testing - E2E Testing</li>
-            </ul>
-          </div>
-          <div class="ml-2">
-            <h2 class="text-2xl font-semibold mb-1">Interests:</h2>
-
-            <ul class="text-xl font-medium">
-              <li>Computers</li>
-              <li>Game Development</li>
-              <li>Formula 1</li>
-              <li>Camping - Basketball</li>
-              <li>Pixel Art Generation</li>
-            </ul>
-          </div>
-        </div>
+        <span class="bg-secondary h-2 w-20 block rounded mb-8"></span>
+        <Technologies />
       </section>
-      <section
-        id="projects"
-        class=" bg-secondary-light rounded  p-8 lg:p-16 shadow"
-      >
+      <section class=" bg-primary rounded  p-8 lg:p-16 shadow">
+        <h2 class="text-3xl font-semibold mb-1">Technologies I'm Learning</h2>
+        <span class="bg-secondary h-2 w-20 block rounded mb-8"></span>
+        <LearningTechnologies />
+      </section>
+      <section id="projects" class=" bg-primary rounded  p-8 lg:p-16 shadow">
         <h2 class="text-3xl font-semibold mb-1">My Projects</h2>
-        <span class="bg-black h-2 w-10 block rounded mb-8"></span>
+        <span class="bg-secondary h-2 w-10 block rounded mb-8"></span>
         <div class="grid lg:grid-cols-3 gap-8">
-          <div class="card bg-slate-100 p-4 rounded shadow cursor-pointer">
+          <div class="card bg-tertiary p-4 rounded shadow cursor-pointer">
             <p class="text-2xl font-semibold mb-2">Eliexpress</p>
             <img
               src={Astro.resolve('../assets/mockup1.png')}
@@ -310,7 +260,7 @@
               width="300"
             />
           </div>
-          <div class="card bg-slate-100 p-4 rounded shadow cursor-pointer">
+          <div class="card bg-tertiary p-4 rounded shadow cursor-pointer">
             <p class="text-2xl font-semibold mb-2">Eli Dash</p>
             <img
               src={Astro.resolve('../assets/mockup2.png')}
@@ -320,12 +270,9 @@
           </div>
         </div>
       </section>
-      <section
-        id="blog"
-        class=" bg-secondary-light rounded  p-8 lg:p-16 shadow"
-      >
+      <section id="blog" class=" bg-primary rounded  p-8 lg:p-16 shadow">
         <h2 class="text-3xl font-semibold mb-1">Blog</h2>
-        <span class="bg-black h-2 w-10 block rounded mb-8"></span>
+        <span class="bg-secondary h-2 w-10 block rounded mb-8"></span>
         <h3 class="font-medium text-2xl">
           Some day, ill get the insperation to start writing my own blog. <br />
           But for now enjoy staring at this section.
@@ -333,7 +280,6 @@
       </section>
     </main>
 
-    <footer></footer>
     <script>
       function openMenu() {
         var main = document.getElementById('main');
@@ -371,7 +317,16 @@
           });
         }, 100);
       }
-      
+
+      function themeToggel() {
+        if (document.body.classList.contains('light')) {
+          document.body.classList.remove('light');
+          document.body.classList.add('dark');
+        } else {
+          document.body.classList.add('light');
+          document.body.classList.remove('dark');
+        }
+      }
     </script>
   </body>
 </html>
