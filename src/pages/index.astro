@@ -78,12 +78,10 @@ import { Technologies, LearningTechnologies } from '../components/Icons.jsx';
       id="header"
       class="w-[240px] flex flex-col  items-center h-[500px] header bg-black text-white  rounded float-left fixed top-32 lg:top-16 px-8 gap-4 pt-16 pb-8  shadow z-10"
     >
-      <button class="absolute top-4 left-4" onclick="themeToggel()">
+      <button class="absolute top-4 left-4 " onclick="themeToggel()">
         <i
-          class="fa fa-moon-o   w-8 h-8 p-1 hover:bgb  text-white hover:bg-white transition-all hover:text-black flex items-center justify-center   rounded-full"
-          aria-hidden="true"></i>
-        <i
-          class="fa fa-sun-o   w-8 h-8 p-1  text-white hover:bg-white transition-all hover:text-black flex items-center justify-center   rounded-full"
+          id="themeIcon"
+          class="fa fa-moon-o   p-2 w-8 h-8  flex items-center justify-center   text-white hover:bg-white transition-all hover:text-black   rounded-full"
           aria-hidden="true"></i>
       </button>
 
@@ -183,9 +181,10 @@ import { Technologies, LearningTechnologies } from '../components/Icons.jsx';
           <br />
           I'm Abdallah Karam
         </h1>
-        <h2 class="text-xl font-medium">
+        <h2 class="text-xl font-medium mb-4">
           I'm a fulltime IT Administrator, and a freelance Full-Stack Developer
         </h2>
+        <p>In other words,i build the web while keeping the servers running.</p>
         <div class="absolute bottom-8 delay-1000 animate-bounce">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -252,21 +251,17 @@ import { Technologies, LearningTechnologies } from '../components/Icons.jsx';
         <h2 class="text-3xl font-semibold mb-1">My Projects</h2>
         <span class="bg-secondary h-2 w-10 block rounded mb-8"></span>
         <div class="grid lg:grid-cols-3 gap-8">
-          <div class="card bg-tertiary p-4 rounded shadow cursor-pointer">
-            <p class="text-2xl font-semibold mb-2">Eliexpress</p>
-            <img
-              src={Astro.resolve('../assets/eli1.png')}
-              alt="My Picture"
-              width="300"
-            />
-          </div>
-          <div class="card bg-tertiary p-4 rounded shadow cursor-pointer">
-            <p class="text-2xl font-semibold mb-2">Eli Dash</p>
-            <img
-              src={Astro.resolve('../assets/mockup2.png')}
-              alt="My Picture"
-              width="300"
-            />
+          <div
+            class="card bg-tertiary p-4 rounded shadow cursor-pointer flex flex-col items-center"
+          >
+            <p class="text-2xl font-semibold mb-4">Eliexpress</p>
+            <div class="overflow-hidden ">
+              <img
+                src={Astro.resolve('../assets/eli1.png')}
+                alt="My Picture"
+                width="300"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -319,12 +314,17 @@ import { Technologies, LearningTechnologies } from '../components/Icons.jsx';
       }
 
       function themeToggel() {
+        var icon = document.getElementById('themeIcon');
         if (document.body.classList.contains('light')) {
           document.body.classList.remove('light');
           document.body.classList.add('dark');
+          icon.classList.toggle('fa-moon-o');
+          icon.classList.toggle('fa-sun-o');
         } else {
           document.body.classList.add('light');
           document.body.classList.remove('dark');
+          icon.classList.toggle('fa-moon-o');
+          icon.classList.toggle('fa-sun-o');
         }
       }
     </script>
