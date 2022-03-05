@@ -25,7 +25,7 @@ import {
 
 export function Technologies() {
   return (
-    <div className='icons grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6 text-secondary'>
+    <div className='icons grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8 text-secondary'>
       <div>
         <AiFillHtml5 />
         <span>HTML5</span>
@@ -87,7 +87,7 @@ export function Technologies() {
 }
 export function LearningTechnologies() {
   return (
-    <div className='icons grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6 text-secondary'>
+    <div className='icons grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8 text-secondary'>
       <div>
         <SiPhp />
         <span>PHP</span>
