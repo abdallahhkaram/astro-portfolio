@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Take a look at my personal website to find out more about me and what i am capable of"
@@ -32,13 +32,13 @@
     <title>Abdallah Karam</title>
   </head>
   <body
-    class="container mx-auto py-8 lg:py-16 px-4  bg-secondary  overflow-x-hidden"
+    class="container mx-auto py-8 lg:py-16 px-4  bg-secondary overflow-x-hidden "
   >
     <nav
       class="bg-primary sticky z-10 flex items-center gap-4 top-2 lg:hidden text-white p-4 rounded"
     >
       <button
-        class="hover:translate-x-2 transition-all cursor-pointer w-max"
+        class="hover:translate-x-2 transition-all cursor-pointer h-6 w-6"
         onclick="openMenu()"
       >
         <svg
@@ -354,11 +354,13 @@
         tooltip.innerHTML = val;
       };
       function ScrollTo(id) {
-        var elmntToView = document.getElementById(id);
-        elmntToView.scrollIntoView({ block: 'center' });
         if (window.innerWidth < 1024) {
           openMenu();
         }
+        setTimeout(() => {
+          var elmntToView = document.getElementById(id);
+          elmntToView.scrollIntoView({ block: 'center' });
+        }, 100);
       }
     </script>
   </body>
