@@ -7,22 +7,22 @@
 // tertiary #f1f5f9
 
 * {
-  .light {
-    --bgPrimary: white;
-    --bgTertiary: rgb(241, 245, 249);
-    --bgSecondary: black;
-    --textSecondary: black;
-    --textPrimary: white;
-    --overlay: 241, 245, 249;
-  }
-  .dark {
-    --bgPrimary: black;
-    --bgTertiary: rgb(13, 13, 13);
-    --bgSecondary: white;
-    --textSecondary: white;
-    --textPrimary: black;
-    --overlay: 13, 13, 13;
-  }
+	.light {
+		--bgPrimary: white;
+		--bgTertiary: rgb(241, 245, 249);
+		--bgSecondary: black;
+		--textSecondary: black;
+		--textPrimary: white;
+		--overlay: 241, 245, 249;
+	}
+	.dark {
+		--bgPrimary: black;
+		--bgTertiary: rgb(13, 13, 13);
+		--bgSecondary: white;
+		--textSecondary: white;
+		--textPrimary: black;
+		--overlay: 13, 13, 13;
+	}
 }
 
 h1,
@@ -30,130 +30,131 @@ h2,
 h3,
 p,
 li {
-  color: var(--textSecondary);
+	color: var(--textSecondary);
 }
 
 * {
-  font-family: 'Montserrat', sans-serif;
-  scrollbar-color: var(--bgSecondary) var(--bgTertiary);
-  scrollbar-width: thin;
-  scroll-behavior: smooth;
+	font-family: 'Montserrat', sans-serif;
+	scrollbar-color: var(--bgSecondary) var(--bgTertiary);
+	scrollbar-width: thin;
+	scroll-behavior: smooth;
 }
 
 section {
-  z-index: 0;
+	z-index: 0;
 }
 
 .hide {
-  display: none;
+	display: none;
 }
 
 @media only screen and (max-width: 1024px) {
-  .header {
-    transition: ease-in-out;
-    transition-duration: 150ms;
-    transform: translateX(-100vw);
-  }
-  .mainOpen {
-    transition: ease-in-out;
-    transition-duration: 150ms;
-    transform: translateX(256px);
-  }
-  .headerOpen {
-    transition: ease-in-out;
-    transition-duration: 150ms;
-    transform: translateX(0);
-  }
+	.header {
+		transition: ease-in-out;
+		transition-duration: 150ms;
+		transform: translateX(-100vw);
+	}
+	.mainOpen {
+		transition: ease-in-out;
+		transition-duration: 150ms;
+		transform: translateX(256px);
+	}
+	.headerOpen {
+		transition: ease-in-out;
+		transition-duration: 150ms;
+		transform: translateX(0);
+	}
 }
 ::-webkit-scrollbar {
-  width: 10px;
+	width: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--bgSecondary);
-  border-radius: 5px;
+	background: var(--bgSecondary);
+	border-radius: 5px;
 }
 .text {
-  background: var(--bgSecondary);
-  color: var(--textPrimary);
-  padding: 1px;
+	background: var(--bgSecondary);
+	color: var(--textPrimary);
+	padding: 0.25rem;
+	font-weight: 600;
 }
 
 .tooltip {
-  display: inline-block;
-  position: relative;
+	display: inline-block;
+	position: relative;
 
-  text-align: left;
+	text-align: left;
 }
 
 .tooltip .right {
-  width: max-content;
-  top: 50%;
-  left: 100%;
-  margin-left: 20px;
-  transform: translate(0, -50%);
-  padding: 10px 20px;
-  background-color: white;
-  font-size: 16px;
-  border-radius: 8px;
-  position: absolute;
-  z-index: 99999999;
-  box-sizing: border-box;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
-  display: none;
-  color: black !important;
+	width: max-content;
+	top: 50%;
+	left: 100%;
+	margin-left: 20px;
+	transform: translate(0, -50%);
+	padding: 10px 20px;
+	background-color: white;
+	font-size: 16px;
+	border-radius: 8px;
+	position: absolute;
+	z-index: 99999999;
+	box-sizing: border-box;
+	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+	display: none;
+	color: black !important;
 }
 
 .tooltip:hover .right {
-  display: block;
+	display: block;
 }
 
 .tooltip .right i {
-  position: absolute;
-  top: 50%;
-  right: 100%;
-  margin-top: -5px;
-  width: 5px;
-  height: 10px;
-  overflow: hidden;
+	position: absolute;
+	top: 50%;
+	right: 100%;
+	margin-top: -5px;
+	width: 5px;
+	height: 10px;
+	overflow: hidden;
 }
 
 .tooltip .right i::after {
-  content: '';
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  left: 0;
-  top: 50%;
-  transform: translate(50%, -50%) rotate(-45deg);
-  background-color: white;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+	content: '';
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	left: 0;
+	top: 50%;
+	transform: translate(50%, -50%) rotate(-45deg);
+	background-color: white;
+	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
 
 .icons {
-  svg {
-    color: var(--bgSecondary);
-    font-size: 3rem;
-    margin-bottom: 5px;
-  }
-  div {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
-    justify-content: center;
-  }
+	svg {
+		color: var(--bgSecondary);
+		font-size: 3rem;
+		margin-bottom: 5px;
+	}
+	div {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		align-items: center;
+		justify-content: center;
+	}
 }
 
 .projectImage {
-  z-index: -10;
+	z-index: -10;
 }
 
 .overlay {
-  background: rgba(var(--overlay), 0.3);
-  opacity: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+	background: rgba(var(--overlay), 0.3);
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
