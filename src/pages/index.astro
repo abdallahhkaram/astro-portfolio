@@ -1,496 +1,419 @@
 ---
-import { Technologies, LearningTechnologies } from '../components/Icons.jsx';
+import { Technologies, LearningTechnologies } from "../components/Icons.jsx";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"
-		/>
-		<meta
-			name="description"
-			content="Take a look at my personal website to find out more about me and what i am capable of"
-		/>
-		<meta
-			name="keywords"
-			content="Abdallah Karam, Web Developer, Full-Stack,  IT, IT Manager, IT support, Beirut, Istanbul , Turkey , Lebanon, React,Express,MongoDB,Javascrip,HTML,CSS "
-		/>
-		<meta name="author" content="Abdallah Karam" />
-		<link rel="stylesheet" href={Astro.resolve('../styles/global.scss')}
-		/>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-			integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Take a look at my personal website to find out more about me and what i am capable of"
+    />
+    <meta
+      name="keywords"
+      content="Abdallah Karam, Web Developer, Full-Stack,  IT, IT Manager, IT support, Beirut, Istanbul , Turkey , Lebanon, React,Express,MongoDB,Javascrip,HTML,CSS "
+    />
+    <meta name="author" content="Abdallah Karam" />
+    <link rel="stylesheet" href={Astro.resolve("../styles/global.scss")} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-		<title>Abdallah Karam</title>
-	</head>
-	<body
-		class="container mx-auto py-8 lg:py-16 px-4  bg-tertiary overflow-x-hidden "
-	>
-		<nav
-			class="bg-black sticky   z-10 flex items-center gap-4 top-2 lg:hidden text-white p-4 rounded"
-		>
-			<button
-				class="hover:translate-x-2 transition-all cursor-pointer h-6 w-6"
-				onclick="openMenu()"
-				aria-label="menu button"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-6 w-6 "
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-					stroke-width="2"
-					id="openBtn"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M4 6h16M4 12h16M4 18h7"></path>
-				</svg>
+    <title>Abdallah Karam</title>
+  </head>
+  <body
+    class="container mx-auto py-8 lg:py-16 px-4  bg-tertiary overflow-x-hidden "
+  >
+    <nav
+      class="bg-black sticky   z-10 flex items-center gap-4 top-2 lg:hidden text-white p-4 rounded"
+    >
+      <button
+        class="hover:translate-x-2 transition-all cursor-pointer h-6 w-6"
+        onclick="openMenu()"
+        aria-label="menu button"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 "
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+          id="openBtn"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h7"></path>
+        </svg>
 
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-6 w-6 hide "
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-					stroke-width="2"
-					id="closeBtn"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M6 18L18 6M6 6l12 12"></path>
-				</svg>
-			</button>
-			<p class="text-2xl  font-bold text-white">Abdallah Karam</p>
-		</nav>
-		<header
-			id="header"
-			class="w-[240px] flex flex-col  items-center h-[500px] header bg-black text-white  rounded float-left fixed top-32 lg:top-16 px-8 gap-4 pt-16 pb-8  shadow z-10"
-		>
-			<button
-				class="absolute top-4 left-4 "
-				onclick="themeToggel()"
-				aria-label="theme toggle"
-			>
-				<i
-					id="themeIcon"
-					class="fa fa-moon-o   p-2 w-8 h-8  flex items-center justify-center   text-white hover:bg-white transition-all hover:text-black   rounded-full"
-					aria-hidden="true"></i>
-			</button>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 hide "
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+          id="closeBtn"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <p class="text-2xl  font-bold text-white">Abdallah Karam</p>
+    </nav>
+    <header
+      id="header"
+      class="w-[240px] flex flex-col  items-center h-[500px] header bg-black text-white  rounded float-left fixed top-32 lg:top-16 px-8 gap-4 pt-16 pb-8  shadow z-10"
+    >
+      <button
+        class="absolute top-4 left-4 "
+        onclick="themeToggel()"
+        aria-label="theme toggle"
+      >
+        <i
+          id="themeIcon"
+          class="fa fa-moon-o   p-2 w-8 h-8  flex items-center justify-center   text-white hover:bg-white transition-all hover:text-black   rounded-full"
+          aria-hidden="true"></i>
+      </button>
 
-			<img
-				src={Astro.resolve('../assets/me.jpg')}
-				alt="My Picture"
-				class="w-28 h-28 rounded-full "
-			/>
-			<p class="text-xl font-bold text-white">Abdallah Karam</p>
-			<ul class="w-full flex flex-col gap-4 ">
-				<li
-					class="hover:translate-x-2 transition-all cursor-pointer w-max text-white"
-					onclick="ScrollTo('home')"
-				>
-					Home
-				</li>
-				<li
-					class="hover:translate-x-2 transition-all cursor-pointer w-max text-white"
-					onclick="ScrollTo('about')"
-				>
-					About
-				</li>
-				<li
-					class="hover:translate-x-2 transition-all cursor-pointer w-max text-white"
-					onclick="ScrollTo('projects')"
-				>
-					Projects
-				</li>
-				<li
-					class="hover:translate-x-2 transition-all cursor-pointer w-max text-white"
-					onclick="ScrollTo('blog')"
-				>
-					Blog
-				</li>
-			</ul>
-			<ul class="w-full flex justify-between text-2xl mt-auto ">
-				<li class="hover:-translate-y-1 transition-all">
-					<a
-						href="https://www.linkedin.com/in/abdallahkaram/"
-						rel="noreferrer"
-						target="_blank"
-						class="text-white"
-						aria-label="Linkedin"
-						><i class="fa fa-linkedin" aria-hidden="true"></i>
-					</a>
-				</li>
+      <img
+        src={Astro.resolve("../assets/me.jpg")}
+        alt="My Picture"
+        class="w-28 h-28 rounded-full "
+      />
+      <p class="text-xl font-bold text-white">Abdallah Karam</p>
+      <ul class="w-full flex flex-col gap-4 ">
+        <li
+          class="hover:translate-x-2 transition-all cursor-pointer w-max text-white"
+          onclick="ScrollTo('home')"
+        >
+          Home
+        </li>
+        <li
+          class="hover:translate-x-2 transition-all cursor-pointer w-max text-white"
+          onclick="ScrollTo('about')"
+        >
+          About
+        </li>
+        <li
+          class="hover:translate-x-2 transition-all cursor-pointer w-max text-white"
+          onclick="ScrollTo('projects')"
+        >
+          Projects
+        </li>
+        <li
+          class="hover:translate-x-2 transition-all cursor-pointer w-max text-white"
+          onclick="ScrollTo('blog')"
+        >
+          Blog
+        </li>
+      </ul>
+      <ul class="w-full flex justify-between text-2xl mt-auto ">
+        <li class="hover:-translate-y-1 transition-all">
+          <a
+            href="https://www.linkedin.com/in/abdallahkaram/"
+            rel="noreferrer"
+            target="_blank"
+            class="text-white"
+            aria-label="Linkedin"
+            ><i class="fa fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </li>
 
-				<li
-					class="hover:-translate-y-1 transition-all tooltip cursor-pointer z-20"
-					onclick="copy('abdallahhkaram@gmail.com ','email')"
-					onmouseout="outFunc('Copy Email','email')"
-				>
-					<div class="tooltip">
-						<i class="fa fa-at text-white" aria-hidden="true"
-						></i>
-						<div class="right ">
-							<p class="text-black" id="email">
-								Copy Email
-							</p>
-							<i></i>
-						</div>
-					</div>
-				</li>
-				<li class="hover:-translate-y-1 transition-all">
-					<a
-						href="https://github.com/abdallahhkaram"
-						rel="noreferrer"
-						target="_blank"
-						class="text-white"
-						aria-label="Github"
-						><i class="fa fa-github" aria-hidden="true"></i>
-					</a>
-				</li>
-				<li
-					class="hover:-translate-y-1 transition-all tooltip cursor-pointer"
-					onclick="copy('+9005492561675 ','phone1')"
-					onmouseout="outFunc('Copy Phone Number','phone1')"
-				>
-					<div class="tooltip">
-						<i
-							class="fa fa-phone text-white"
-							aria-hidden="true"></i>
-						<div class="right ">
-							<p class="text-black" id="phone1">
-								Copy Phone Number
-							</p>
-							<i></i>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</header>
+        <li
+          class="hover:-translate-y-1 transition-all tooltip cursor-pointer z-20"
+          onclick="copy('abdallahhkaram@gmail.com ','email')"
+          onmouseout="outFunc('Copy Email','email')"
+        >
+          <div class="tooltip">
+            <i class="fa fa-at text-white" aria-hidden="true"></i>
+            <div class="right ">
+              <p class="text-black" id="email">Copy Email</p>
+              <i></i>
+            </div>
+          </div>
+        </li>
+        <li class="hover:-translate-y-1 transition-all">
+          <a
+            href="https://github.com/abdallahhkaram"
+            rel="noreferrer"
+            target="_blank"
+            class="text-white"
+            aria-label="Github"
+            ><i class="fa fa-github" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li
+          class="hover:-translate-y-1 transition-all tooltip cursor-pointer"
+          onclick="copy('+9005492561675 ','phone1')"
+          onmouseout="outFunc('Copy Phone Number','phone1')"
+        >
+          <div class="tooltip">
+            <i class="fa fa-phone text-white" aria-hidden="true"></i>
+            <div class="right ">
+              <p class="text-black" id="phone1">Copy Phone Number</p>
+              <i></i>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </header>
 
-		<main
-			id="main"
-			class="min-h-screen mt-8 lg:mt-0  lg:ml-64 rounded flex px-4 flex-col gap-8 transition-all"
-		>
-			<section
-				id="home"
-				class="h-[500px] bg-primary rounded flex flex-col justify-center p-6 lg:p-8 items-center text-center shadow  relative "
-			>
-				<h1 class="text-4xl font-bold lg:text-6xl leading-10 mb-6">
-					Hey 👋
-					<br />
-					I'm Abdallah Karam
-				</h1>
-				<h2 class="text-xl font-medium mb-4">
-					I'm a fulltime IT Administrator, and a freelance
-					Full-Stack Developer
-				</h2>
-				<div
-					class="absolute bottom-8  animate-bounce text-secondary "
-				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="h-6 w-6"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-						stroke-width="2"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							d="M19 13l-7 7-7-7m14-8l-7 7-7-7"></path>
-					</svg>
-				</div>
-			</section>
-			<section
-				id="about"
-				class=" bg-primary rounded   p-8 lg:p-16  shadow"
-			>
-				<h2 class="text-3xl font-semibold mb-1">About Me</h2>
-				<span class="bg-secondary h-2 w-10 block rounded mb-8"
-				></span>
-				<p class="  text-md font-thin  mb-16 leading-9">
-					My Name is Abdallah Karam from Beirut, Lebanon
-					currently based in Istanbul Turkey. <br /> Coming from an
-					IT background I decided to enter the world of development
-					after a company i was working with wanted to update their
-					existing website and internal ERP and CRM systems. I took
-					on the challenge of learning web development on my own,
-					starting off with the basics of
-					<span class="text"> HTML CSS and Javascript</span> , transitioning
-					to complex frameworks such as
-					<span class="text">ReactJs and NextJs.</span>
-					<br /> Once done with the front end, I moved on to learning
-					about
-					<span class="text"
-						>APIs, databases, backend systems and servers.</span
-					>
-					<br />
-					I grasped the key technologies of the
-					<span class="text"> MERN stack</span> and went on to develop
-					a complete logistics booking and tracking system, having
-					integrated it with international couriers’ APIs such as
-					FedEx, TNT and DHL to name a few. To this day i keep on
-					learning more and more about development everyday with new
-					tools and technologies to add to my arsenal as a full-stack
-					web developer.
-				</p>
-				<div>
-					<a
-						href="./assets/resume.pdf"
-						target="_blank"
-						rel="noreferrer"
-						class="bg-secondary font-semibold text-primary px-4 py-2 inline-block rounded hover:-translate-y-2 transition-all "
-						>Get My Resume</a
-					>
-				</div>
-			</section>
+    <main
+      id="main"
+      class="min-h-screen mt-8 lg:mt-0  lg:ml-64 rounded flex px-4 flex-col gap-8 transition-all"
+    >
+      <section
+        id="home"
+        class="h-[500px] bg-primary rounded flex flex-col justify-center p-6 lg:p-8 items-center text-center shadow  relative "
+      >
+        <h1 class="text-4xl font-bold lg:text-6xl leading-10 mb-6">
+          Hey 👋
+          <br />
+          I'm Abdallah Karam
+        </h1>
+        <h2 class="text-xl font-medium mb-4">
+          I'm a fulltime IT Support Engineer, and a freelance Full-Stack
+          Developer
+        </h2>
+        <div class="absolute bottom-8  animate-bounce text-secondary ">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19 13l-7 7-7-7m14-8l-7 7-7-7"></path>
+          </svg>
+        </div>
+      </section>
+      <section id="about" class=" bg-primary rounded   p-8 lg:p-16  shadow">
+        <h2 class="text-3xl font-semibold mb-1">About Me</h2>
+        <span class="bg-secondary h-2 w-10 block rounded mb-8"></span>
+        <p class="  text-md font-thin  mb-16 leading-9">
+          My Name is Abdallah Karam from Beirut, Lebanon. <br /> Coming from an IT
+          background I decided to enter the world of development after a company
+          i was working with wanted to update their existing website and internal
+          ERP and CRM systems. I took on the challenge of learning web development
+          on my own, starting off with the basics of
+          <span class="text"> HTML CSS and Javascript</span> , transitioning to complex
+          frameworks such as
+          <span class="text">ReactJs and NextJs.</span>
+          <br /> Once done with the front end, I moved on to learning about
+          <span class="text">APIs, databases, backend systems and servers.</span
+          >
+          <br />
+          I grasped the key technologies of the
+          <span class="text"> MERN stack</span> and went on to develop a complete
+          logistics booking and tracking system, having integrated it with international
+          couriers’ APIs such as FedEx, TNT and DHL to name a few. To this day i
+          keep on learning more and more about development everyday with new tools
+          and technologies to add to my arsenal as a full-stack web developer.
+        </p>
+        <div>
+          <a
+            href="./assets/resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            class="bg-secondary font-semibold text-primary px-4 py-2 inline-block rounded hover:-translate-y-2 transition-all "
+            >Get My Resume</a
+          >
+        </div>
+      </section>
 
-			<section class=" bg-primary rounded  p-8 lg:p-16 shadow">
-				<h2 class="text-3xl font-semibold mb-1">
-					Technologies I'm Comfortable With
-				</h2>
-				<span class="bg-secondary h-2 w-20 block rounded mb-8"
-				></span>
-				<Technologies />
-			</section>
-			<section class=" bg-primary rounded  p-8 lg:p-16 shadow">
-				<h2 class="text-3xl font-semibold mb-1">
-					Technologies I'm Learning
-				</h2>
-				<span class="bg-secondary h-2 w-20 block rounded mb-8"
-				></span>
-				<LearningTechnologies />
-			</section>
-			<section
-				id="projects"
-				class=" bg-primary rounded  p-8 lg:p-16 shadow"
-			>
-				<h2 class="text-3xl font-semibold mb-1">My Projects</h2>
-				<span class="bg-secondary h-2 w-10 block rounded mb-8"
-				></span>
-				<div class="grid gap-8  xl:gap-20">
-					<div class="card  p-4 rounded  relative ">
-						<div class="projectInfo max-w-[600px] z-10    ">
-							<p class="text-xl font-semibold mb-6">
-								Eliexpress
-							</p>
-							<p
-								class="leading-8 mb-6 bg-tertiary p-4 rounded opacity-95"
-							>
-								A full-stack logistics booking and
-								tracking website built with NextJS. It
-								connects to a first party API that
-								handles the buisiniess logic. The
-								Backend is integrated with several
-								carrier APis such as FedEx, TNT, DHL,
-								Aras Cargo.
-							</p>
-							<p class="mb-6 opacity-80 ">
-								NextJS - ExpressJS - MongoDB
-							</p>
-							<a
-								href="https://eliexpress.com.tr"
-								rel="noreferrer"
-								target="_blank"
-								aria-label="Eliexpress website link"
-								><i
-									class="fa fa-external-link text-secondary text-lg"
-									aria-hidden="true"></i>
-							</a>
-						</div>
-						<div
-							class="projectImage  top-0 absolute right-0 hidden xl:block "
-						>
-							<img
-								src={Astro.resolve('../assets/eli.png')}
-								alt="My Picture"
-								class=" lg:max-w-[650px] rounded "
-							/>
-							<div class="overlay rounded"></div>
-						</div>
-					</div>
-					<div class="card  p-4 rounded  relative ">
-						<div
-							class="projectInfo max-w-[600px] z-10 xl:float-right xl:text-right  mb-16  "
-						>
-							<p class="text-xl font-semibold mb-6">
-								EliDash
-							</p>
-							<p
-								class="leading-8 mb-6 bg-tertiary p-4 rounded opacity-95"
-							>
-								A custom tailormade ERP and CRM system
-								that handles everything from user
-								managment,to interal logistics
-								operations. It aslo acts as Eliexpress's
-								API.
-							</p>
-							<p class="mb-6 opacity-80 ">
-								ReactJS - ExpressJS - MongoDB
-							</p>
-						</div>
-						<div
-							class="projectImage  top-0 absolute left-0 hidden xl:block  "
-						>
-							<img
-								src={Astro.resolve(
-									'../assets/dash1.png'
-								)}
-								alt="My Picture"
-								class=" lg:max-w-[650px] rounded"
-							/>
+      <section class=" bg-primary rounded  p-8 lg:p-16 shadow">
+        <h2 class="text-3xl font-semibold mb-1">
+          Technologies I'm Comfortable With
+        </h2>
+        <span class="bg-secondary h-2 w-20 block rounded mb-8"></span>
+        <Technologies />
+      </section>
+      <section class=" bg-primary rounded  p-8 lg:p-16 shadow">
+        <h2 class="text-3xl font-semibold mb-1">Technologies I'm Learning</h2>
+        <span class="bg-secondary h-2 w-20 block rounded mb-8"></span>
+        <LearningTechnologies />
+      </section>
+      <section id="projects" class=" bg-primary rounded  p-8 lg:p-16 shadow">
+        <h2 class="text-3xl font-semibold mb-1">My Projects</h2>
+        <span class="bg-secondary h-2 w-10 block rounded mb-8"></span>
+        <div class="grid gap-8  xl:gap-20">
+          <div class="card  p-4 rounded  relative ">
+            <div class="projectInfo max-w-[600px] z-10    ">
+              <p class="text-xl font-semibold mb-6">Eliexpress</p>
+              <p class="leading-8 mb-6 bg-tertiary p-4 rounded opacity-95">
+                A full-stack logistics booking and tracking website built with
+                NextJS. It connects to a first party API that handles the
+                buisiniess logic. The Backend is integrated with several carrier
+                APis such as FedEx, TNT, DHL, Aras Cargo.
+              </p>
+              <p class="mb-6 opacity-80 ">NextJS - ExpressJS - MongoDB</p>
+              <a
+                href="https://eliexpress.com.tr"
+                rel="noreferrer"
+                target="_blank"
+                aria-label="Eliexpress website link"
+                ><i
+                  class="fa fa-external-link text-secondary text-lg"
+                  aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="projectImage  top-0 absolute right-0 hidden xl:block ">
+              <img
+                src={Astro.resolve("../assets/eli.png")}
+                alt="My Picture"
+                class=" lg:max-w-[650px] rounded "
+              />
+              <div class="overlay rounded"></div>
+            </div>
+          </div>
+          <div class="card  p-4 rounded  relative ">
+            <div
+              class="projectInfo max-w-[600px] z-10 xl:float-right xl:text-right  mb-16  "
+            >
+              <p class="text-xl font-semibold mb-6">EliDash</p>
+              <p class="leading-8 mb-6 bg-tertiary p-4 rounded opacity-95">
+                A custom tailormade ERP and CRM system that handles everything
+                from user managment,to interal logistics operations. It aslo
+                acts as Eliexpress's API.
+              </p>
+              <p class="mb-6 opacity-80 ">ReactJS - ExpressJS - MongoDB</p>
+            </div>
+            <div class="projectImage  top-0 absolute left-0 hidden xl:block  ">
+              <img
+                src={Astro.resolve("../assets/dash1.png")}
+                alt="My Picture"
+                class=" lg:max-w-[650px] rounded"
+              />
 
-							<div class="overlay rounded"></div>
-						</div>
-					</div>
-					<div class="card  p-4 rounded  relative ">
-						<div class="projectInfo max-w-[600px] z-10    ">
-							<p class="text-xl font-semibold mb-6">
-								Dax-Stax-Cli
-							</p>
-							<p
-								class="leading-8 mb-6 bg-tertiary p-4 rounded opacity-95"
-							>
-								A cli tool that scaffolds a
-								NextJs-Typescript-TailwindCSS project in
-								seconds.
-							</p>
-							<p class="mb-6 opacity-80 ">Typescript</p>
-							<a
-								href="https://www.npmjs.com/package/dax-stax"
-								rel="noreferrer"
-								target="_blank"
-								aria-label="Dax Stax CLI link"
-								><i
-									class="fa fa-external-link text-secondary text-lg"
-									aria-hidden="true"></i>
-							</a>
-						</div>
-						<div
-							class="projectImage  top-0 absolute right-0 hidden xl:block "
-						>
-							<img
-								src={Astro.resolve(
-									'../assets/dax-staxpng.png'
-								)}
-								alt="My Picture"
-								class=" md:max-w-[550px] aspect-video rounded "
-							/>
-							<div class="overlay rounded"></div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section
-				id="blog"
-				class=" bg-primary rounded  p-8 lg:p-16 shadow"
-			>
-				<h2 class="text-3xl font-semibold mb-1">Blog</h2>
-				<span class="bg-secondary h-2 w-10 block rounded mb-8"
-				></span>
-				<h3 class="font-medium text-2xl">
-					Some day, ill get the inspiration to start writing my
-					own blog. <br />
-					But for now enjoy staring at this section.
-				</h3>
-			</section>
-		</main>
+              <div class="overlay rounded"></div>
+            </div>
+          </div>
+          <div class="card  p-4 rounded  relative ">
+            <div class="projectInfo max-w-[600px] z-10    ">
+              <p class="text-xl font-semibold mb-6">Dax-Stax-Cli</p>
+              <p class="leading-8 mb-6 bg-tertiary p-4 rounded opacity-95">
+                A cli tool that scaffolds a NextJs-Typescript-TailwindCSS
+                project in seconds.
+              </p>
+              <p class="mb-6 opacity-80 ">Typescript</p>
+              <a
+                href="https://www.npmjs.com/package/dax-stax"
+                rel="noreferrer"
+                target="_blank"
+                aria-label="Dax Stax CLI link"
+                ><i
+                  class="fa fa-external-link text-secondary text-lg"
+                  aria-hidden="true"></i>
+              </a>
+            </div>
+            <div class="projectImage  top-0 absolute right-0 hidden xl:block ">
+              <img
+                src={Astro.resolve("../assets/dax-staxpng.png")}
+                alt="My Picture"
+                class=" md:max-w-[550px] aspect-video rounded "
+              />
+              <div class="overlay rounded"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="blog" class=" bg-primary rounded  p-8 lg:p-16 shadow">
+        <h2 class="text-3xl font-semibold mb-1">Blog</h2>
+        <span class="bg-secondary h-2 w-10 block rounded mb-8"></span>
+        <h3 class="font-medium text-2xl">
+          Some day, ill get the inspiration to start writing my own blog. <br />
+          But for now enjoy staring at this section.
+        </h3>
+      </section>
+    </main>
 
-		<script>
-			const a = localStorage.getItem('theme')
-				? localStorage.getItem('theme')
-				: window.matchMedia('(prefers-color-scheme: dark)').matches
-				? 'dark'
-				: 'light';
-			if (a === 'dark') {
-				document.body.classList.add('dark');
-				document
-					.getElementById('themeIcon')
-					.classList.remove('fa-moon-o');
-				document
-					.getElementById('themeIcon')
-					.classList.add('fa-sun-o');
-			} else {
-				document.body.classList.add('light');
-				document
-					.getElementById('themeIcon')
-					.classList.add('fa-moon-o');
-				document
-					.getElementById('themeIcon')
-					.classList.remove('fa-sun-o');
-			}
-			function openMenu() {
-				var main = document.getElementById('main');
-				var header = document.getElementById('header');
-				var open = document.getElementById('openBtn');
-				var close = document.getElementById('closeBtn');
-				main.classList.toggle('mainOpen');
-				header.classList.toggle('headerOpen');
-				open.classList.toggle('hide');
-				close.classList.toggle('hide');
-			}
-			const copy = (val, id) => {
-				navigator.clipboard.writeText(val);
-				var tooltip = document.getElementById(id);
-				tooltip.innerHTML = 'Copied: ' + val;
-			};
-			const outFunc = (val, id) => {
-				var tooltip = document.getElementById(id);
-				tooltip.innerHTML = val;
-			};
-			function ScrollTo(id) {
-				if (window.innerWidth < 1024) {
-					openMenu();
-				}
-				setTimeout(() => {
-					var element = document.getElementById(id);
-					var headerOffset = window.innerWidth > 1024 ? 64 : 90;
-					var elementPosition =
-						element.getBoundingClientRect().top;
-					var offsetPosition =
-						elementPosition +
-						window.pageYOffset -
-						headerOffset;
+    <script>
+      const a = localStorage.getItem("theme")
+        ? localStorage.getItem("theme")
+        : window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+      if (a === "dark") {
+        document.body.classList.add("dark");
+        document.getElementById("themeIcon").classList.remove("fa-moon-o");
+        document.getElementById("themeIcon").classList.add("fa-sun-o");
+      } else {
+        document.body.classList.add("light");
+        document.getElementById("themeIcon").classList.add("fa-moon-o");
+        document.getElementById("themeIcon").classList.remove("fa-sun-o");
+      }
+      function openMenu() {
+        var main = document.getElementById("main");
+        var header = document.getElementById("header");
+        var open = document.getElementById("openBtn");
+        var close = document.getElementById("closeBtn");
+        main.classList.toggle("mainOpen");
+        header.classList.toggle("headerOpen");
+        open.classList.toggle("hide");
+        close.classList.toggle("hide");
+      }
+      const copy = (val, id) => {
+        navigator.clipboard.writeText(val);
+        var tooltip = document.getElementById(id);
+        tooltip.innerHTML = "Copied: " + val;
+      };
+      const outFunc = (val, id) => {
+        var tooltip = document.getElementById(id);
+        tooltip.innerHTML = val;
+      };
+      function ScrollTo(id) {
+        if (window.innerWidth < 1024) {
+          openMenu();
+        }
+        setTimeout(() => {
+          var element = document.getElementById(id);
+          var headerOffset = window.innerWidth > 1024 ? 64 : 90;
+          var elementPosition = element.getBoundingClientRect().top;
+          var offsetPosition =
+            elementPosition + window.pageYOffset - headerOffset;
 
-					window.scrollTo({
-						top: offsetPosition,
-						behavior: 'smooth',
-					});
-				}, 100);
-			}
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        }, 100);
+      }
 
-			function themeToggel() {
-				var icon = document.getElementById('themeIcon');
-				if (document.body.classList.contains('light')) {
-					document.body.classList.remove('light');
-					document.body.classList.add('dark');
-					icon.classList.toggle('fa-moon-o');
-					icon.classList.toggle('fa-sun-o');
-					localStorage.setItem('theme', 'dark');
-				} else {
-					document.body.classList.add('light');
-					document.body.classList.remove('dark');
-					icon.classList.toggle('fa-moon-o');
-					icon.classList.toggle('fa-sun-o');
-					localStorage.setItem('theme', 'light');
-				}
-			}
-		</script>
-	</body>
+      function themeToggel() {
+        var icon = document.getElementById("themeIcon");
+        if (document.body.classList.contains("light")) {
+          document.body.classList.remove("light");
+          document.body.classList.add("dark");
+          icon.classList.toggle("fa-moon-o");
+          icon.classList.toggle("fa-sun-o");
+          localStorage.setItem("theme", "dark");
+        } else {
+          document.body.classList.add("light");
+          document.body.classList.remove("dark");
+          icon.classList.toggle("fa-moon-o");
+          icon.classList.toggle("fa-sun-o");
+          localStorage.setItem("theme", "light");
+        }
+      }
+    </script>
+  </body>
 </html>
